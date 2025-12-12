@@ -9,6 +9,18 @@
 
 ---
 
+## DOMAINS
+
+| Domain | Purpose |
+|--------|---------|
+| **oxyhelpdanmark.dk** | Primary domain (OxyHelp B2B sales - Denmark) |
+| oxyhelpkobenhavn.dk | Geo landing page (Copenhagen-specific) |
+
+**GitHub repo:** `oxyhelp-danmark`
+**Netlify site:** `oxyhelp-danmark`
+
+---
+
 ## PURPOSE
 
 B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric chambers:
@@ -44,7 +56,7 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 ## TECHNICAL
 
 - Pure static HTML/CSS (no build step)
-- Inter font (Google Fonts)
+- Fira Sans font (matches oxyhelp.com)
 - Custom CSS (not Tailwind)
 - Netlify Forms with honeypot spam protection
 - Mobile responsive
@@ -53,14 +65,32 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 
 ## DESIGN
 
-- Professional blue color scheme
-- Clean, trustworthy aesthetic
-- Simple navigation (logo + CTA)
-- Cards and grids for information
+**Style:** Oxyhelp Brand Aligned (85-90%, not clone)
+
+**Colors (from oxyhelp.com):**
+- Primary cerulean: #00aeef
+- Dark navy: #001d39, #181862
+- Light blue backgrounds: #e3f5fe, #c4e2f4
+
+**Elements:**
+- Fira Sans font (weights 300-700)
+- Pill-shaped buttons (border-radius: 50px)
+- Gradient hero with subtle blue radial effects
+- Rounded cards (16px border-radius)
+- Hover effects with shadows and transforms
+- Modern medical-tech aesthetic
+
+**Design Principles (per designer feedback):**
+- 85-90% visual alignment with oxyhelp.com, not 100% clone
+- Match: font, primary colors, button shapes, section rhythm
+- Differentiate: header layout, hero imagery (Nordic context), CTA phrasing (partner-oriented)
+- Goal: "Official Nordic partner" not "shadow copy of main site"
 
 ---
 
 ## CHANGELOG
 
 ### December 2024
+- `[2024-12-12]` Restyled to match Oxyhelp brand (85-90% alignment per designer feedback)
+- `[2024-12-12]` Added robots.txt to block search engines during development
 - `[2024-12-11]` Initial site creation - complete B2B landing page
