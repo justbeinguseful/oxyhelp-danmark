@@ -35,7 +35,8 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 
 - Clinic owners and decision-makers in Denmark
 - Physiotherapy, fertility, sports, wellness, biohacking clinics
-- Looking to add HBOT to their service offering
+- **Private individuals** wanting a chamber for home use
+- Looking to add HBOT to their service offering or personal wellness
 
 ---
 
