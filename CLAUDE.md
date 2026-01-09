@@ -43,14 +43,16 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 ## CONTENT STRUCTURE
 
 ### Current Sections
-1. **Hero** - Value proposition and CTA
-2. **Hvorfor Oxyhelp** - Product benefits (EU-made, hard chamber, PVHO, reliability)
-3. **Hard vs Soft** - Info box comparing chamber types
-4. **For hvilke klinikker** - Target clinic types
-5. **Business case** - Investment, financing, break-even info
-6. **Proces** - Step-by-step partnership process
-7. **Reference** - Peak Renewal Labs case study
-8. **Kontakt** - Netlify-ready contact form
+1. **Hero** - Danish contact point badge, primary CTA "Få dansk tilbud"
+2. **Sådan fungerer køb** - 3-step purchase process
+3. **Hvorfor Oxyhelp** - Product benefits (EU-made, hard chamber, PVHO, reliability)
+4. **Hard vs Soft** - Info box comparing chamber types
+5. **For hvilke klinikker** - Target clinic types
+6. **Business case** - Investment, financing, break-even info
+7. **Hvad vi hjælper med** - Trust blocks (Danish contact, pricing negotiation, financing, showroom)
+8. **Showroom** - Copenhagen showroom info
+9. **Kontakt** - Simplified form with "Få dansk tilbud" CTA
+10. **Thank you page** - `/tak.html` confirmation page
 
 ---
 
@@ -92,6 +94,17 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 ## CHANGELOG
 
 ### December 2024
+- `[2024-12-24]` Major overhaul for Danish lead capture optimization:
+  - Updated SEO (title, meta description) for Denmark-focused keywords
+  - Changed nav CTA to "Få tilbud (Danmark)"
+  - New hero with "Dansk kontaktpunkt" badge and microcopy
+  - Added "Sådan fungerer køb" 3-step process section
+  - Replaced old process section with "Hvad vi hjælper med" trust blocks
+  - Trust card updated: "Vi forhandler en god pris på dine vegne"
+  - Simplified contact form (name, email, phone, purpose dropdown)
+  - Created thank you page (`tak.html`)
+  - Added manufacturer link to footer only
+  - Created `/assets/images/` folder for future images
 - `[2024-12-12]` Restyled to match Oxyhelp brand (85-90% alignment per designer feedback)
 - `[2024-12-12]` Added robots.txt to block search engines during development
 - `[2024-12-11]` Initial site creation - complete B2B landing page
