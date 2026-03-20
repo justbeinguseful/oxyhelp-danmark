@@ -574,10 +574,66 @@
         <div class="container">
             <p class="footer-note">Oxyhelp Danmark er en uafhængig lokal samarbejdspartner, ikke producenten selv.</p>
             <p class="footer-links">
-                <a href="https://oxyhelp.com" target="_blank" rel="noopener">Oxyhelp.com (producent)</a>
+                <a href="https://oxyhelp.com" target="_blank" rel="noopener">Oxyhelp.com (producent)</a> ·
+                <a href="/privatlivspolitik.html">Privatlivspolitik</a>
             </p>
-            <p class="footer-copy">&copy; 2026 Oxyhelp Danmark</p>
+            <p class="footer-copy">&copy; 2026 Oxyhelp Danmark. Alle rettigheder forbeholdes.</p>
+            <p class="footer-copy" style="margin-top: 4px; font-size: 0.75rem;">Alt indhold på denne side er ophavsretligt beskyttet.</p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="hidden" style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--oxy-navy); color: white; padding: 16px 24px; z-index: 9999; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 0.875rem;">
+        <p style="margin: 0;">Vi bruger cookies til at analysere trafik og forbedre din oplevelse. <a href="/privatlivspolitik.html" style="color: var(--oxy-cerulean); text-decoration: underline;">Læs vores privatlivspolitik</a></p>
+        <div style="display: flex; gap: 8px;">
+            <button id="cookie-accept-necessary" style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.875rem;">Kun nødvendige</button>
+            <button id="cookie-accept-all" style="background: var(--oxy-cerulean); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.875rem;">Acceptér alle</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptAllBtn = document.getElementById('cookie-accept-all');
+        var acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
+        var consentGiven = localStorage.getItem('cookie-consent');
+
+        if (!consentGiven && cookieBanner) {
+            cookieBanner.classList.remove('hidden');
+            cookieBanner.style.display = 'flex';
+        }
+
+        if (acceptAllBtn) {
+            acceptAllBtn.addEventListener('click', function() {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted',
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted'
+                });
+                localStorage.setItem('cookie-consent', 'all');
+                cookieBanner.classList.add('hidden');
+                cookieBanner.style.display = 'none';
+            });
+        }
+
+        if (acceptNecessaryBtn) {
+            acceptNecessaryBtn.addEventListener('click', function() {
+                localStorage.setItem('cookie-consent', 'necessary');
+                cookieBanner.classList.add('hidden');
+                cookieBanner.style.display = 'none';
+            });
+        }
+
+        if (consentGiven === 'all') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
+        }
+    });
+    </script>
 </body>
 </html>
