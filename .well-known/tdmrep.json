@@ -1,0 +1,35 @@
+{
+  "@context": "http://www.w3.org/ns/tdmrep",
+  "@type": "TDMPolicy",
+  "tdm:provider": "OxyHelp Danmark",
+  "tdm:asserts": [
+    {
+      "@type": "TDMAssertion",
+      "tdm:contentScope": "https://oxyhelpdanmark.dk/",
+      "tdm:permission": [
+        {
+          "@type": "TDMPermission",
+          "tdm:action": "tdm:index",
+          "tdm:assignee": "tdm:everyone"
+        },
+        {
+          "@type": "TDMPermission",
+          "tdm:action": "tdm:search",
+          "tdm:assignee": "tdm:everyone"
+        }
+      ],
+      "tdm:prohibition": [
+        {
+          "@type": "TDMProhibition",
+          "tdm:action": "tdm:mine",
+          "tdm:assignee": "tdm:everyone"
+        },
+        {
+          "@type": "TDMProhibition",
+          "tdm:action": "tdm:train",
+          "tdm:assignee": "tdm:everyone"
+        }
+      ]
+    }
+  ]
+}
