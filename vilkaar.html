@@ -104,7 +104,7 @@
         </p>
         <p>
             Oxyhelp Danmark<br>
-            E-mail: <a href="mailto:info@oxyhelpdanmark.dk">info@oxyhelpdanmark.dk</a>
+            E-mail: <a class="e-obf" href="#" data-n="info" data-h="oxyhelpdanmark.dk">info [at] oxyhelpdanmark dot dk</a>
         </p>
 
         <div class="back-link-container">
@@ -124,5 +124,19 @@
             <p class="footer-copy">&copy; 2026 Oxyhelp Danmark</p>
         </div>
     </footer>
+
+<!-- email obfuscation (anti-harvest) -->
+<script>
+(function(){
+  document.querySelectorAll('a.e-obf').forEach(function(a){
+    var n=a.getAttribute('data-n'),h=a.getAttribute('data-h'),s=a.getAttribute('data-s');
+    if(!n||!h)return;
+    var addr=n+'@'+h;
+    a.setAttribute('href','mailto:'+addr+(s?('?subject='+encodeURIComponent(s)):''));
+    if(!a.hasAttribute('data-keep-text'))a.textContent=addr;
+  });
+})();
+</script>
+
 </body>
 </html>

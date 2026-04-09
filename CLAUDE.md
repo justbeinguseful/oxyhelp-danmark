@@ -2,7 +2,7 @@
 
 ## CRITICAL: Read This First
 
-> **BEFORE ANY CHANGES:** Read `../GLOBAL_RULES.md` for cross-site rules!
+> **BEFORE ANY CHANGES:** Read `../.claude/rules/global-rules.md` for cross-site rules!
 
 **Primary Language:** Danish (DA)
 **Tone:** Professional B2B, informative, trustworthy
@@ -92,6 +92,12 @@ B2B landing page for Danish clinics interested in purchasing Oxyhelp hyperbaric 
 ---
 
 ## CHANGELOG
+
+### April 2026
+- `[2026-04-09]` Security/anti-harvest: Obfuscated `info@oxyhelpdanmark.dk` on privatlivspolitik.html (2 occurrences) and vilkaar.html. Replaced plain `mailto:` with JS `e-obf` pattern. See HQ todo #63. Saved locally, needs push.
+
+### January 2026
+- `[2026-01-16]` SEO: Updated sitemap.xml dates
 
 ### December 2024
 - `[2024-12-24]` Major overhaul for Danish lead capture optimization:
