@@ -4,6 +4,10 @@
 # Default: allow all standard crawlers
 User-agent: *
 Allow: /
+Disallow: /UTKAST-sidestruktur.html
+Disallow: /version-1a10c66.html
+Disallow: /version-5273567.html
+Disallow: /version-8e8191e.html
 
 # --- ALLOW: User-facing AI search bots (these cite us in answers) ---
 User-agent: ChatGPT-User
