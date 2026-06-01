@@ -6,6 +6,7 @@
 - [OxyHelp Danmark](https://oxyhelpdanmark.dk/): OxyHelp hyperbaric chamber sales and information for the Danish market
 - [Investering og finansiering](https://oxyhelpdanmark.dk/investering.html): Investment overview, operating cost estimates, leasing and break-even model for an OxyHelp chamber
 - [Franchise muligheder](https://oxyhelpdanmark.dk/franchise.html): Franchise and partnership opportunities for starting an HBOT clinic in Denmark
+- [Tak](https://oxyhelpdanmark.dk/tak.html): Confirmation page after contact-form submission
 
 ## Legal
 - [Privatlivspolitik](https://oxyhelpdanmark.dk/privatlivspolitik.html): Privacy policy
