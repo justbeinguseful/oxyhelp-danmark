@@ -1,0 +1,11 @@
+# === Anti-harvest: block public access to internal markdown / docs folders. ===
+# Trigger: 2026-04-28 audit found peakrenewal.dk/CLAUDE.md publicly serving
+# plaintext info@ via Netlify (any .md tracked in repo root is served by
+# default). See .claude/rules/global-rules.md - "Contact Info Exposure Rule
+# (CRITICAL - HARD STOP, anti-harvest)". Force 404 on any of:
+/*.md            /   404!
+/*/*.md          /   404!
+/*/*/*.md        /   404!
+/docs/*          /   404!
+/.claude/*       /   404!
+# === end anti-harvest ===
