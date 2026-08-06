@@ -1,4 +1,9 @@
 # === Anti-harvest: block public access to internal markdown / docs folders. ===
+# Canonical public URLs: redirect file-extension variants to the clean URLs
+# already used by navigation, canonical tags and JSON-LD.
+/investering.html    /investering    301!
+/franchise.html      /franchise      301!
+
 # Trigger: 2026-04-28 audit found peakrenewal.dk/CLAUDE.md publicly serving
 # plaintext info@ via Netlify (any .md tracked in repo root is served by
 # default). See .claude/rules/global-rules.md - "Contact Info Exposure Rule
