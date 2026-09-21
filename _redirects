@@ -1,3 +1,6 @@
+# Keep internal CI configuration out of the published site.
+/.github/*           /404.html       404!
+
 # === Anti-harvest: block public access to internal markdown / docs folders. ===
 # Canonical public URLs: redirect file-extension variants to the clean URLs
 # already used by navigation, canonical tags and JSON-LD.

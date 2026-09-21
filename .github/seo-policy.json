@@ -1,0 +1,90 @@
+{
+  "host": "oxyhelpdanmark.dk",
+  "baseline_commit": "0876660d980f93bf6ba7d7db584d9a78054a85fb",
+  "required_sitemap_paths": [
+    "/"
+  ],
+  "preserve_noindex_files": [
+    "UTKAST-sidestruktur.html",
+    "privatlivspolitik.html",
+    "tak.html",
+    "version-1a10c66.html",
+    "version-5273567.html",
+    "version-8e8191e.html",
+    "vilkaar.html"
+  ],
+  "protected_redirects": [
+    [
+      "/.github/*",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/CLAUDE.md",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/README.md",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/*.md",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/*/*.md",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/*/*/*.md",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/docs/*",
+      "/404.html",
+      "404!"
+    ],
+    [
+      "/.claude/*",
+      "/404.html",
+      "404!"
+    ]
+  ],
+  "protected_robots_paths": [
+    "/UTKAST-sidestruktur.html",
+    "/version-1a10c66.html",
+    "/version-5273567.html",
+    "/version-8e8191e.html"
+  ],
+  "allow_search_bots": [
+    "Googlebot",
+    "Bingbot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "PerplexityBot",
+    "Claude-SearchBot",
+    "Claude-User"
+  ],
+  "preserve_blocked_bots": [
+    "GPTBot",
+    "ClaudeBot",
+    "anthropic-ai",
+    "Google-Extended",
+    "CCBot",
+    "meta-externalagent",
+    "FacebookBot",
+    "Bytespider",
+    "Amazonbot",
+    "cohere-ai",
+    "Diffbot",
+    "Omgilibot",
+    "YouBot",
+    "Applebot-Extended"
+  ],
+  "reviewed_existing_exceptions": []
+}
