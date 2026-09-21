@@ -11,3 +11,6 @@
   status = 404
   force = true
 
+# Fail deployment on technical SEO regressions after the existing build completes.
+[[plugins]]
+  package = "./.github/netlify-seo-guard"
