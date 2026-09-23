@@ -72,31 +72,26 @@
     }
     </script>
 
-    <!-- Cookie Consent Modal Styles -->
+    <!-- Oxyhelp Cookie Consent Banner Styles -->
     <style id="cookie-modal-styles">
-      .cc-overlay{position:fixed;inset:0;background:rgba(44,62,44,.55);backdrop-filter:blur(4px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;animation:ccFadeIn .25s ease-out}
-      .cc-overlay.hidden{display:none}
-      @keyframes ccFadeIn{from{opacity:0}to{opacity:1}}
-      @keyframes ccSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-      .cc-card{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 25px 50px -12px rgba(0,0,0,.35);animation:ccSlideUp .3s ease-out}
-      .cc-toggle{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0}
-      .cc-toggle input{opacity:0;width:0;height:0}
-      .cc-slider{position:absolute;cursor:pointer;inset:0;background:#d1d5db;transition:.3s;border-radius:24px}
-      .cc-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background:#fff;transition:.3s;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.2)}
-      .cc-toggle input:checked+.cc-slider{background:#8BA888}
-      .cc-toggle input:checked+.cc-slider:before{transform:translateX(18px)}
-      .cc-toggle input:disabled+.cc-slider{background:#B8C5B4;cursor:not-allowed;opacity:.7}
-      .cc-row{border-top:1px solid #f0f0f0;padding:12px 0}
-      .cc-row:first-child{border-top:none}
-      .cc-details{display:none;padding-top:8px;font-size:13px;color:#666;line-height:1.5}
-      .cc-details.open{display:block}
-      .cc-chev{transition:transform .2s;width:16px;height:16px;color:#999}
-      .cc-chev.open{transform:rotate(180deg)}
-      .cc-btn{padding:12px 16px;border-radius:10px;font-weight:500;font-size:14px;flex:1;transition:all .15s;cursor:pointer;border:1px solid #d1d5db;text-align:center}
-      .cc-btn-accept{background:#2C3E2C;color:#fff;border-color:#2C3E2C;font-weight:600}
-      .cc-btn-accept:hover{background:#1e2e1e}
-      .cc-btn-secondary{background:#fff;color:#2C3E2C}
-      .cc-btn-secondary:hover{background:#f9fafb}
+      .oxy-cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--oxy-navy);color:#fff;padding:16px 24px;z-index:9999;font-size:.875rem;max-height:80vh;overflow-y:auto}
+      .oxy-cookie-banner.hidden{display:none}
+      .oxy-cookie-content{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+      .oxy-cookie-content>p{margin:0;flex:1 1 400px}
+      .oxy-cookie-banner a{color:var(--oxy-cerulean);text-decoration:underline}
+      .oxy-cookie-actions{display:flex;gap:8px;flex-wrap:wrap}
+      .oxy-cookie-button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);padding:8px 16px;border-radius:4px;cursor:pointer;font:inherit}
+      .oxy-cookie-button:hover{background:rgba(255,255,255,.12)}
+      .oxy-cookie-button:focus-visible,.oxy-cookie-settings summary:focus-visible{outline:2px solid var(--oxy-cerulean);outline-offset:4px}
+      .oxy-cookie-accept{background:var(--oxy-cerulean);color:var(--oxy-navy);border-color:var(--oxy-cerulean)}
+      .oxy-cookie-accept:hover{background:var(--oxy-cerulean-dark)}
+      .oxy-cookie-settings{width:100%;font:inherit}
+      .oxy-cookie-settings summary{cursor:pointer;width:fit-content;text-decoration:underline}
+      .oxy-cookie-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0}
+      .oxy-cookie-options label{display:block;font-weight:500}
+      .oxy-cookie-options input{width:auto;margin-right:6px;accent-color:var(--oxy-cerulean)}
+      .oxy-cookie-options small{display:block;font-weight:400;color:#d2e5f1;margin-top:6px}
+      @media(max-width:600px){.oxy-cookie-banner{padding:16px}.oxy-cookie-content>p{flex-basis:100%}.oxy-cookie-actions{width:100%}.oxy-cookie-actions button{flex:1}.oxy-cookie-options{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
@@ -541,24 +536,24 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Modal -->
-    <div id="cookie-modal" class="cc-overlay">
-      <div class="cc-card">
-        <div style="padding:24px 28px">
-          <h2 style="font-family:inherit;font-size:1.5rem;font-weight:600;margin:0 0 8px;color:#2C3E2C">Vi bruger cookies</h2>
-          <p style="font-size:14px;color:#666;line-height:1.6;margin:0 0 16px">Vi bruger cookies til at forbedre din oplevelse, analysere trafik og vise relevante annoncer. Du kan vælge hvilke kategorier du vil acceptere — og altid ændre dit valg senere. <a href="/privatlivspolitik.html" style="color:#2C3E2C;text-decoration:underline">Læs vores privatlivspolitik</a>.</p>
-          <div style="background:#F5F5F0;border-radius:8px;padding:0 16px;margin:0 0 20px">
-            <div class="cc-row"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1"><button onclick="ccToggle('cc-det-nec','cc-ch-nec')" style="display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;padding:0"><span style="font-weight:500;font-size:14px;color:#2C3E2C">Nødvendige</span><svg id="cc-ch-nec" class="cc-chev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><span style="font-size:12px;color:#999;display:block;margin-top:2px">Altid aktiv</span></div><label class="cc-toggle"><input type="checkbox" checked disabled><span class="cc-slider"></span></label></div><div id="cc-det-nec" class="cc-details">Nødvendige for at siden fungerer — fx at huske dit samtykke og beskytte mod misbrug. Kan ikke fravælges.</div></div>
-            <div class="cc-row"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1"><button onclick="ccToggle('cc-det-pref','cc-ch-pref')" style="display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;padding:0"><span style="font-weight:500;font-size:14px;color:#2C3E2C">Præferencer</span><svg id="cc-ch-pref" class="cc-chev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><span style="font-size:12px;color:#999;display:block;margin-top:2px">Husk dine valg, fx sprog</span></div><label class="cc-toggle"><input type="checkbox" id="cc-cat-pref"><span class="cc-slider"></span></label></div><div id="cc-det-pref" class="cc-details">Husker oplysninger der ændrer hvordan siden opfører sig — fx foretrukket sprog eller region.</div></div>
-            <div class="cc-row"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1"><button onclick="ccToggle('cc-det-stat','cc-ch-stat')" style="display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;padding:0"><span style="font-weight:500;font-size:14px;color:#2C3E2C">Statistik</span><svg id="cc-ch-stat" class="cc-chev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><span style="font-size:12px;color:#999;display:block;margin-top:2px">Hjælper os med at forstå brugen af siden</span></div><label class="cc-toggle"><input type="checkbox" id="cc-cat-stat"><span class="cc-slider"></span></label></div><div id="cc-det-stat" class="cc-details">Anonym statistik om hvordan besøgende bruger siden (Google Analytics).</div></div>
-            <div class="cc-row"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1"><button onclick="ccToggle('cc-det-mark','cc-ch-mark')" style="display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;padding:0"><span style="font-weight:500;font-size:14px;color:#2C3E2C">Markedsføring</span><svg id="cc-ch-mark" class="cc-chev" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button><span style="font-size:12px;color:#999;display:block;margin-top:2px">Viser dig relevante annoncer</span></div><label class="cc-toggle"><input type="checkbox" id="cc-cat-mark"><span class="cc-slider"></span></label></div><div id="cc-det-mark" class="cc-details">Bruges til at vise relevante annoncer på tværs af websites (Google Ads, Meta Pixel).</div></div>
-          </div>
-          <div style="display:flex;gap:10px">
-            <button onclick="ccConsent('all')" class="cc-btn cc-btn-accept">Accepter alle</button>
-            <button onclick="ccConsent('custom')" class="cc-btn cc-btn-secondary">Gem valg</button>
-            <button onclick="ccConsent('necessary')" class="cc-btn cc-btn-secondary">Afvis alle</button>
-          </div>
+    <!-- Oxyhelp Cookie Consent Banner -->
+    <div id="cookie-modal" class="oxy-cookie-banner" role="region" aria-label="Cookievalg">
+      <div class="oxy-cookie-content">
+        <p>Vi bruger cookies til at analysere trafik, forbedre din oplevelse og vise relevante annoncer. <a href="/privatlivspolitik.html">Læs vores privatlivspolitik</a>.</p>
+        <div class="oxy-cookie-actions">
+          <button type="button" onclick="ccConsent('necessary')" class="oxy-cookie-button">Kun nødvendige</button>
+          <button type="button" onclick="ccConsent('all')" class="oxy-cookie-button oxy-cookie-accept">Acceptér alle</button>
         </div>
+        <details class="oxy-cookie-settings">
+          <summary>Tilpas cookies</summary>
+          <div class="oxy-cookie-options">
+            <label><input type="checkbox" checked disabled>Nødvendige<small>Husker dit samtykke og beskytter mod misbrug. Altid aktive.</small></label>
+            <label><input type="checkbox" id="cc-cat-pref">Præferencer<small>Husker dine valg, fx sprog eller region.</small></label>
+            <label><input type="checkbox" id="cc-cat-stat">Statistik<small>Anonym statistik om brugen af siden (Google Analytics).</small></label>
+            <label><input type="checkbox" id="cc-cat-mark">Markedsføring<small>Relevante annoncer på tværs af websites (Google Ads, Meta Pixel).</small></label>
+          </div>
+          <button type="button" onclick="ccConsent('custom')" class="oxy-cookie-button">Gem valg</button>
+        </details>
       </div>
     </div>
 
